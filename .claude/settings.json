@@ -1,0 +1,53 @@
+{
+  "hooks": {
+    "SubagentStop": [
+      {
+        "matcher": "ux-planner",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[WORKFLOW] UX Planner concluido. Proximo passo OBRIGATORIO: executar o agente dev-executor para implementar o plano CSS.'"
+          }
+        ]
+      },
+      {
+        "matcher": "dev-executor",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[WORKFLOW] Dev Executor concluido. Proximo passo OBRIGATORIO: executar o agente ux-reviewer para auditar as mudancas visuais.'"
+          }
+        ]
+      },
+      {
+        "matcher": "ux-reviewer",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[WORKFLOW] UX Reviewer concluido. Proximo passo OBRIGATORIO: executar o agente dev-reviewer para revisar o codigo CSS.'"
+          }
+        ]
+      },
+      {
+        "matcher": "dev-reviewer",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[WORKFLOW] Dev Reviewer concluido. Pipeline COMPLETO. A task pode ser finalizada.'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Verifique o transcript desta sessao. Se houve mudancas em arquivos CSS (Edit ou Write em arquivos .css), confirme que os 4 agentes do pipeline foram executados na ordem: ux-planner, dev-executor, ux-reviewer, dev-reviewer. Se algum agente foi pulado, responda NAO. Se nenhum arquivo CSS foi editado (apenas leitura/conversa), ou se todos os 4 agentes rodaram, responda SIM.",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
