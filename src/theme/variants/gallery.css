@@ -1,4 +1,6 @@
-/* ── Property Detail / Gallery Variant ── */
+/* ── Property Detail / Gallery Variant ──
+   NEOBRUTALISM EDITION: Bordas grossas nas imagens
+   ──────────────────────────────────────────────────── */
 
 @layer components {
   .property-detail {
@@ -8,25 +10,49 @@
   .property-gallery {
     border-radius: var(--radius-xl);
     overflow: hidden;
+    border: var(--border-brutal);
+    box-shadow: var(--shadow-brutal-xl);
   }
 
   .property-gallery img {
     transition: var(--transition-transform);
+    border: 3px solid var(--color-border);
+  }
+
+  .property-gallery img:hover {
+    transform: scale(1.02);
   }
 
   .property-info h2 {
     font-family: var(--font-heading);
     color: var(--color-text);
+    font-weight: var(--weight-black);
+    border-bottom: 4px solid var(--color-accent);
+    padding-bottom: 0.5rem;
   }
 
   .property-features {
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     border-radius: var(--radius-xl);
+    border: var(--border-brutal);
+    box-shadow: var(--shadow-brutal-lg);
+    color: var(--color-text);
+  }
+
+  .property-features h3 {
+    font-weight: var(--weight-black);
+    text-transform: uppercase;
   }
 
   .property-agent {
     background-color: var(--color-surface);
-    border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-card);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-brutal-lg);
+    border: var(--border-brutal);
+  }
+
+  .property-agent img {
+    border: 3px solid var(--color-border);
+    border-radius: var(--radius-full);
   }
 }

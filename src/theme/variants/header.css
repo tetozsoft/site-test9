@@ -1,30 +1,59 @@
-/* ── Header Variant ── */
+/* ── Header Variant ──
+   NEOBRUTALISM EDITION: Borda inferior grossa, links bold
+   ───────────────────────────────────────────────────────── */
 
 @layer components {
   .site-header {
-    background-color: hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95);
-    border-bottom-color: var(--color-border);
+    background-color: var(--color-bg);
+    border-bottom: var(--border-brutal-thick);
+    box-shadow: 0 5px 0 var(--color-border);
   }
 
   .site-nav__link {
-    color: var(--color-text-muted);
+    color: var(--color-text);
     transition: var(--transition-colors);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    font-size: var(--text-sm);
+    letter-spacing: 0.5px;
+    position: relative;
   }
 
   .site-nav__link:hover {
-    color: var(--color-text);
+    color: var(--color-primary);
+  }
+
+  .site-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transition: transform var(--duration-base) var(--ease-bounce);
+  }
+
+  .site-nav__link:hover::after {
+    transform: scaleX(1);
   }
 
   .mobile-nav {
-    border-top-color: var(--color-border);
+    border-top: var(--border-brutal);
+    background-color: var(--color-bg);
   }
 
   .mobile-nav a {
     color: var(--color-text);
     transition: var(--transition-colors);
+    font-weight: var(--weight-semibold);
+    padding: 1rem;
+    border-bottom: 2px solid var(--color-secondary);
   }
 
   .mobile-nav a:hover {
-    color: var(--color-accent);
+    color: var(--color-primary);
+    background-color: var(--color-accent);
   }
 }

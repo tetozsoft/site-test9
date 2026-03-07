@@ -1,4 +1,6 @@
-/* ── Button Variants ── */
+/* ── Button Variants ──
+   NEOBRUTALISM EDITION: Bordas grossas, hard shadow, cores vibrantes
+   ─────────────────────────────────────────────────────────────────── */
 
 @layer components {
   .btn {
@@ -6,47 +8,86 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    font-weight: var(--weight-medium);
-    transition: var(--transition-all);
+    font-weight: var(--weight-bold);
+    transition: var(--transition-transform);
     cursor: pointer;
+    border: var(--border-brutal);
+    box-shadow: var(--shadow-brutal-md);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: var(--text-sm);
+  }
+
+  .btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-brutal-lg);
+  }
+
+  .btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-border);
   }
 
   .btn--primary {
     background-color: var(--color-primary);
     color: var(--color-primary-fg);
+    border-color: var(--color-border);
   }
 
   .btn--primary:hover {
-    opacity: 0.9;
+    background-color: var(--color-primary-dark);
   }
 
   .btn--secondary {
     background-color: var(--color-secondary);
     color: var(--color-text);
+    border-color: var(--color-border);
   }
 
   .btn--secondary:hover {
-    background-color: var(--color-border);
+    background-color: var(--color-text);
+    color: var(--color-bg);
   }
 
   .btn--outline {
     background-color: transparent;
-    border: 1px solid var(--color-accent);
-    color: var(--color-accent);
+    border: var(--border-brutal);
+    color: var(--color-text);
   }
 
   .btn--outline:hover {
-    background-color: var(--color-accent);
-    color: var(--color-accent-fg);
+    background-color: var(--color-text);
+    color: var(--color-bg);
   }
 
   .btn--accent {
-    background-image: var(--gold-gradient);
-    color: var(--color-primary-fg);
+    background-color: var(--color-accent);
+    color: var(--color-accent-fg);
+    border-color: var(--color-border);
   }
 
   .btn--accent:hover {
-    opacity: 0.9;
-    box-shadow: var(--shadow-elegant);
+    background-color: var(--color-accent-warm);
+  }
+
+  .btn--pink {
+    background-color: var(--color-pink);
+    color: var(--color-primary-fg);
+    border-color: var(--color-border);
+  }
+
+  .btn--pink:hover {
+    background-color: #D6005C;
+  }
+
+  .btn--green {
+    background-color: var(--color-green);
+    color: var(--color-text);
+    border-color: var(--color-border);
+  }
+
+  .btn--green:hover {
+    background-color: #00D972;
   }
 }

@@ -1,15 +1,25 @@
-/* ── Card Base Variant ── */
+/* ── Card Base Variant ──
+   NEOBRUTALISM EDITION: Borda grossa preta, hard shadow
+   ──────────────────────────────────────────────────── */
 
 @layer components {
   .card {
     background-color: var(--color-surface);
-    border-radius: var(--radius-2xl);
+    border-radius: var(--radius-xl);
     overflow: hidden;
-    transition: var(--transition-all);
-    box-shadow: var(--shadow-card);
+    transition: var(--transition-transform);
+    box-shadow: var(--shadow-brutal-lg);
+    border: var(--border-brutal);
+    position: relative;
   }
 
   .card:hover {
-    box-shadow: var(--shadow-hover);
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-brutal-xl);
+  }
+
+  .card:active {
+    transform: translate(2px, 2px);
+    box-shadow: var(--shadow-brutal-sm);
   }
 }
