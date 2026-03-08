@@ -3,13 +3,15 @@
 @layer components {
   .card {
     background-color: var(--color-surface);
-    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
     overflow: hidden;
     transition: var(--transition-all);
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow-elegant);
   }
 
   .card:hover {
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-card);
+    border-color: hsl(220, 20%, 82%);
   }
 }

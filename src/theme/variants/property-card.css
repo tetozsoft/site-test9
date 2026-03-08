@@ -3,16 +3,18 @@
 @layer components {
   .property-card {
     background-color: var(--color-surface);
-    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
     overflow: hidden;
     transition: var(--transition-all);
     transition-duration: var(--duration-slow);
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow-elegant);
   }
 
   .property-card:hover {
     transform: translateY(-0.5rem);
     box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent);
   }
 
   .property-card__image img {
@@ -25,10 +27,11 @@
 
   .property-card__badge {
     background-color: var(--color-accent);
-    color: var(--color-accent-fg);
+    color: white;
     font-size: var(--text-xs);
     font-weight: var(--weight-semibold);
     border-radius: var(--radius-full);
+    padding: 0.25rem 0.75rem;
   }
 
   .property-card__title {
@@ -38,7 +41,7 @@
   }
 
   .property-card:hover .property-card__title {
-    color: var(--color-accent);
+    color: var(--color-primary);
   }
 
   .property-card__price {

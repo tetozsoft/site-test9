@@ -9,6 +9,9 @@
     font-weight: var(--weight-medium);
     transition: var(--transition-all);
     cursor: pointer;
+    border-radius: var(--radius-lg);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid transparent;
   }
 
   .btn--primary {
@@ -17,16 +20,19 @@
   }
 
   .btn--primary:hover {
-    opacity: 0.9;
+    background-color: hsl(220, 70%, 40%);
+    box-shadow: var(--shadow-elegant);
   }
 
   .btn--secondary {
     background-color: var(--color-secondary);
     color: var(--color-text);
+    border-color: var(--color-border);
   }
 
   .btn--secondary:hover {
-    background-color: var(--color-border);
+    background-color: hsl(220, 20%, 90%);
+    border-color: hsl(220, 20%, 82%);
   }
 
   .btn--outline {
@@ -37,16 +43,18 @@
 
   .btn--outline:hover {
     background-color: var(--color-accent);
-    color: var(--color-accent-fg);
+    color: white;
+    box-shadow: var(--shadow-elegant);
   }
 
   .btn--accent {
     background-image: var(--gold-gradient);
-    color: var(--color-primary-fg);
+    color: white;
+    border: none;
   }
 
   .btn--accent:hover {
-    opacity: 0.9;
-    box-shadow: var(--shadow-elegant);
+    box-shadow: var(--shadow-card);
+    transform: translateY(-1px);
   }
 }

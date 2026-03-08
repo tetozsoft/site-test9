@@ -2,19 +2,30 @@
 
 @layer components {
   .services-section {
-    background-color: var(--color-primary);
+    background-color: hsl(220, 70%, 25%);
     color: var(--color-primary-fg);
   }
 
   .services-card {
-    background-color: hsl(0, 0%, 100%, 0.05);
-    border: 1px solid hsl(0, 0%, 100%, 0.1);
-    border-radius: var(--radius-2xl);
+    background-color: hsl(220, 70%, 30%);
+    border: 1px solid hsl(220, 50%, 40%);
+    border-radius: var(--radius-xl);
     transition: var(--transition-all);
+    padding: 2rem;
   }
 
   .services-card:hover {
-    background-color: hsl(0, 0%, 100%, 0.1);
+    background-color: hsl(220, 70%, 35%);
+    border-color: var(--color-accent);
     transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-card);
+  }
+
+  .services-card h3 {
+    color: white;
+  }
+
+  .services-card p {
+    color: hsl(220, 20%, 85%);
   }
 }

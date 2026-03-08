@@ -7,22 +7,26 @@
 
   .contact-form {
     background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-color: var(--color-border);
-    border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-elegant);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    padding: 2rem;
   }
 
   .contact-form .input {
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg);
     border-color: var(--color-border);
     color: var(--color-text);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     transition: var(--transition-all);
+    padding: 0.75rem 1rem;
   }
 
   .contact-form .input:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 2px hsl(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l));
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px hsl(220, 70%, 45%, 0.1);
+    outline: none;
   }
 
   .contact-form .input::placeholder {

@@ -2,29 +2,34 @@
 
 @layer components {
   .site-header {
-    background-color: hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95);
+    background-color: hsl(220, 25%, 97%, 0.98);
     border-bottom-color: var(--color-border);
+    backdrop-filter: blur(8px);
   }
 
   .site-nav__link {
     color: var(--color-text-muted);
     transition: var(--transition-colors);
+    font-weight: var(--weight-medium);
   }
 
   .site-nav__link:hover {
-    color: var(--color-text);
+    color: var(--color-primary);
   }
 
   .mobile-nav {
     border-top-color: var(--color-border);
+    background-color: var(--color-surface);
   }
 
   .mobile-nav a {
     color: var(--color-text);
     transition: var(--transition-colors);
+    padding: 0.75rem 1rem;
   }
 
   .mobile-nav a:hover {
-    color: var(--color-accent);
+    color: var(--color-primary);
+    background-color: var(--color-bg);
   }
 }

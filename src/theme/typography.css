@@ -5,7 +5,7 @@
 
 :root {
   /* ── Font families ── */
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
