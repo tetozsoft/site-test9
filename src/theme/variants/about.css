@@ -1,43 +1,11 @@
-/* ── About / Section Variant ──
-   NEOBRUTALISM EDITION: Títulos bold, highlights vibrantes
-   ────────────────────────────────────────────────────────── */
+/* ── About / Section Variant ── */
 
 @layer components {
   .section__title {
     font-family: var(--font-heading);
-    font-weight: var(--weight-black);
-    color: var(--color-text);
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
-    position: relative;
-    display: inline-block;
-  }
-
-  .section__title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background-color: var(--color-accent);
-    border: 2px solid var(--color-border);
-    box-shadow: 3px 3px 0 var(--color-border);
   }
 
   .section__highlight {
-    color: var(--color-primary);
-    background-color: var(--color-accent);
-    padding: 0 0.5rem;
-    border: 2px solid var(--color-border);
-    box-shadow: 3px 3px 0 var(--color-border);
-    display: inline-block;
-    transform: rotate(-1deg);
-    font-weight: var(--weight-black);
-  }
-
-  .section__subtitle {
-    color: var(--color-text-muted);
-    font-weight: var(--weight-medium);
+    color: var(--color-accent);
   }
 }

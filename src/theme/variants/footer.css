@@ -1,53 +1,8 @@
-/* ── Footer Variant ──
-   NEOBRUTALISM EDITION: Fundo preto sólido, texto branco
-   ───────────────────────────────────────────────────────── */
+/* ── Footer Variant ── */
 
 @layer components {
   .site-footer {
-    background-color: var(--color-text);
-    color: var(--color-bg);
-    border-top: var(--border-brutal-thick);
-    position: relative;
-  }
-
-  .site-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(
-      to right,
-      var(--color-pink) 0%,
-      var(--color-purple) 25%,
-      var(--color-primary) 50%,
-      var(--color-green) 75%,
-      var(--color-accent) 100%
-    );
-  }
-
-  .site-footer h3,
-  .site-footer h4 {
-    color: var(--color-bg);
-    font-weight: var(--weight-black);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .site-footer p,
-  .site-footer a {
-    color: var(--color-bg);
-    opacity: 0.9;
-  }
-
-  .site-footer a:hover {
-    color: var(--color-accent);
-    opacity: 1;
-  }
-
-  .site-footer__copyright {
-    border-top: 3px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.8);
+    background-color: var(--color-primary);
+    color: var(--color-primary-fg);
   }
 }

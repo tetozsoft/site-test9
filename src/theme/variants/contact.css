@@ -1,82 +1,36 @@
-/* ── Contact Variant ──
-   NEOBRUTALISM EDITION: Inputs com borda grossa, hard shadow em focus
-   ───────────────────────────────────────────────────────────────────── */
+/* ── Contact Variant ── */
 
 @layer components {
   .contact-section {
     background-color: var(--color-secondary);
-    position: relative;
-  }
-
-  .contact-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 20px,
-        rgba(0, 0, 0, 0.03) 20px,
-        rgba(0, 0, 0, 0.03) 40px
-      );
-    pointer-events: none;
   }
 
   .contact-form {
     background-color: var(--color-surface);
-    border: var(--border-brutal);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-brutal-xl);
-    position: relative;
-    z-index: 1;
+    border-color: var(--color-border);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-elegant);
   }
 
-  .contact-form .input,
-  .contact-form textarea,
-  .contact-form select {
-    background-color: var(--color-bg);
-    border: 3px solid var(--color-border);
+  .contact-form .input {
+    background-color: var(--color-secondary);
+    border-color: var(--color-border);
     color: var(--color-text);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     transition: var(--transition-all);
-    font-weight: var(--weight-medium);
-    box-shadow: var(--shadow-brutal-sm);
   }
 
-  .contact-form .input:focus,
-  .contact-form textarea:focus,
-  .contact-form select:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 4px var(--color-accent);
-    outline: none;
-    transform: translate(-2px, -2px);
+  .contact-form .input:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px hsl(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l));
   }
 
-  .contact-form .input::placeholder,
-  .contact-form textarea::placeholder {
+  .contact-form .input::placeholder {
     color: var(--color-text-muted);
-    opacity: 0.7;
-    font-weight: var(--weight-normal);
-  }
-
-  .contact-form label {
-    color: var(--color-text);
-    font-weight: var(--weight-bold);
-    text-transform: uppercase;
-    font-size: var(--text-sm);
-    letter-spacing: 0.5px;
+    opacity: 0.6;
   }
 
   .modal__overlay {
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(4px);
-  }
-
-  .modal__content {
-    border: var(--border-brutal);
-    box-shadow: var(--shadow-brutal-xl);
-    border-radius: var(--radius-xl);
-    background-color: var(--color-bg);
+    background-color: hsl(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5);
   }
 }

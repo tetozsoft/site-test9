@@ -161,38 +161,21 @@
 
 @layer components {
   .text-gradient-gold {
-    color: var(--color-accent);
-    font-weight: var(--weight-black);
-    text-shadow: 2px 2px 0 var(--color-border);
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gold-gradient);
   }
 
   .btn-primary {
-    @apply text-primary-foreground transition-all;
-    background-color: var(--color-primary);
-    border: var(--border-brutal);
-    box-shadow: var(--shadow-brutal-md);
-    font-weight: var(--weight-bold);
-  }
-
-  .btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    transform: translate(-2px, -2px);
-    box-shadow: var(--shadow-brutal-lg);
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300;
   }
 
   .btn-accent {
-    @apply transition-all;
-    background-color: var(--color-accent);
-    color: var(--color-accent-fg);
-    border: var(--border-brutal);
-    box-shadow: var(--shadow-brutal-md);
-    font-weight: var(--weight-bold);
+    @apply text-primary-foreground transition-all duration-300;
+    background-image: var(--gold-gradient);
   }
 
   .btn-accent:hover {
-    background-color: var(--color-accent-warm);
-    transform: translate(-2px, -2px);
-    box-shadow: var(--shadow-brutal-lg);
+    @apply opacity-90 shadow-lg;
   }
 
   .section-padding {

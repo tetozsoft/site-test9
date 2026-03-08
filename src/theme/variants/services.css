@@ -1,87 +1,20 @@
-/* ── Services Variant ──
-   NEOBRUTALISM EDITION: Fundo vibrante, cards com bordas grossas
-   ──────────────────────────────────────────────────────────────── */
+/* ── Services Variant ── */
 
 @layer components {
   .services-section {
     background-color: var(--color-primary);
     color: var(--color-primary-fg);
-    position: relative;
-  }
-
-  .services-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 50px,
-        rgba(255, 255, 255, 0.05) 50px,
-        rgba(255, 255, 255, 0.05) 51px
-      );
-    pointer-events: none;
   }
 
   .services-card {
-    background-color: var(--color-bg);
-    border: var(--border-brutal);
-    border-radius: var(--radius-xl);
-    transition: var(--transition-transform);
-    box-shadow: var(--shadow-brutal-lg);
-    color: var(--color-text);
-    position: relative;
-    z-index: 1;
+    background-color: hsl(0, 0%, 100%, 0.05);
+    border: 1px solid hsl(0, 0%, 100%, 0.1);
+    border-radius: var(--radius-2xl);
+    transition: var(--transition-all);
   }
 
   .services-card:hover {
-    transform: translate(-2px, -2px) rotate(1deg);
-    box-shadow: var(--shadow-brutal-xl);
-  }
-
-  .services-card:nth-child(1) {
-    border-color: var(--color-pink);
-    box-shadow: 6px 6px 0 var(--color-pink);
-  }
-
-  .services-card:nth-child(1):hover {
-    box-shadow: 10px 10px 0 var(--color-pink);
-  }
-
-  .services-card:nth-child(2) {
-    border-color: var(--color-green);
-    box-shadow: 6px 6px 0 var(--color-green);
-  }
-
-  .services-card:nth-child(2):hover {
-    box-shadow: 10px 10px 0 var(--color-green);
-  }
-
-  .services-card:nth-child(3) {
-    border-color: var(--color-accent);
-    box-shadow: 6px 6px 0 var(--color-accent);
-  }
-
-  .services-card:nth-child(3):hover {
-    box-shadow: 10px 10px 0 var(--color-accent);
-  }
-
-  .services-card:nth-child(4) {
-    border-color: var(--color-orange);
-    box-shadow: 6px 6px 0 var(--color-orange);
-  }
-
-  .services-card:nth-child(4):hover {
-    box-shadow: 10px 10px 0 var(--color-orange);
-  }
-
-  .services-card h3 {
-    font-weight: var(--weight-black);
-    color: var(--color-text);
-  }
-
-  .services-card p {
-    color: var(--color-text-muted);
+    background-color: hsl(0, 0%, 100%, 0.1);
+    transform: translateY(-0.25rem);
   }
 }
