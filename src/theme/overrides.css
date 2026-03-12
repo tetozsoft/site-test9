@@ -2,6 +2,23 @@
    Scrollbar, selection, focus rings using tokens.
    ─────────────────────────────────────────────── */
 
+/* ── Hero Banner Title ── */
+.hero__title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: clamp(3.5rem, 7vw, 5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: clamp(4.5rem, 8vw, 6rem);
+  }
+}
+
 ::selection {
   background-color: var(--color-accent);
   color: var(--color-accent-fg);
